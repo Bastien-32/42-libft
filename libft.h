@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/08 11:15:44 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/09 15:03:05 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ void	*ft_memset(void *s, int c, size_t n);
 	et retourne s.
 		/!\ caster en (unsigned char) *s et c
 		/!\ ((unsigned char *)s)[i]  */
+
+char	**ft_split(char const *s, char c);
 
 char	*ft_strchr(const char *s, int c);
 /*  recherche le caractère c dans une cdc s terminée par

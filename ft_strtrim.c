@@ -6,51 +6,59 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:14:57 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/08 11:39:10 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/09 14:52:56 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlentrim(const char *s, char const *set)
+/*
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	j = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+*/
+int	ft_strchrtrim(const char *s, int c)
+{
+	int	i;
+
+	i = 0;
 	while (s[i])
 	{
-		if (s[i] == set[0])
-			j++;
+		if (s[i] == (char)c)
+			return (1);
 		i++;
 	}
-	return (i - j);
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	start;
+	size_t	end;
 	char	*dest;
 
 	i = 0;
-	j = 0;
-	dest = (char *)malloc((ft_strlentrim(s1, set) + 1) * sizeof(char));
+	start = 0;
+	end = ft_strlen(s1);
+	while (s1[start] && ft_strchrtrim(set, s1[start]))
+		start++;
+	while (end > start && ft_strchrtrim(set, s1[end - 1]))
+		end--;
+	dest = (char *)malloc((end - start + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
-	while (s1[i])
+	while (i < end - start)
 	{
-		if (s1[i] != set[0])
-		{
-			dest[j] = s1[i];
-			i++;
-			j++;
-		}
-		else
-			i++;
+		dest[i] = s1[start + i];
+		i++;
 	}
-	dest[j] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 /*
@@ -58,9 +66,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 int main(void)
 {
-	char	*s = "Hello, world   !";
+	char	*s = "   Hello, world   !   ";
 	char	*set = " ";
 	char	*dest = ft_strtrim(s, set);
 	printf("%s\n", dest);
+	free(dest);
 }
 */
