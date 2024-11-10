@@ -6,19 +6,21 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:02:05 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/10 22:08:46 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/10 22:26:59 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_lenstring(const char *s, char c)
+static int	ft_nwords(const char *s, char c)
 {
 	int	i;
 	int	count;
 
 	i = 0;
 	count = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
@@ -28,26 +30,26 @@ static int	ft_lenstring(const char *s, char c)
 	return (count);
 }
 
-static size_t	ft_lenword(char const *s, char c, size_t n)
+static size_t	ft_lenword(char const *s, char c, size_t posi)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[n + i] && s[n + i] != c)
+	while (s[posi + i] && s[posi + i] != c)
 		i++;
 	return (i);
 }
 
-static char	*ft_strdupsplit(const char *s, size_t posi, size_t n)
+static char	*ft_strdupsplit(const char *s, size_t posi, size_t lenword)
 {
 	char	*dest;
 	size_t	i;
 
 	i = 0;
-	dest = (char *)malloc((n + 1) * sizeof(char));
+	dest = (char *)malloc((lenword + 1) * sizeof(char));
 	if (!dest)
 		return (NULL);
-	while (i < n)
+	while (i < lenword)
 	{
 		dest[i] = s[posi + i];
 		i++;
@@ -78,8 +80,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	tab = (char **)malloc((ft_lenstring(s, c) + 1) * sizeof(char *));
-	if (!tab || !s)
+	tab = (char **)malloc((ft_nwords(s, c) + 1) * sizeof(char *));
+	if (!tab)
 		return (NULL);
 	while (s[i])
 	{
@@ -133,7 +135,7 @@ int main ()
 {
 	char *s = "ku i   o jk   ";
 	char c = ' ';
-	int j = ft_lenstring(s, c);
+	int j = ft_nwords(s, c);
 	printf("%d", j);
 }
  */
