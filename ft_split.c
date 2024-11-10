@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:02:05 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/10 18:41:53 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/10 22:08:46 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s)
-		return (NULL);
 	tab = (char **)malloc((ft_lenstring(s, c) + 1) * sizeof(char *));
-	if (!tab)
+	if (!tab || !s)
 		return (NULL);
 	while (s[i])
 	{
