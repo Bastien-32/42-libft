@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 14:59:17 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/11 16:01:51 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int		ft_isprint(int c);
 /* retourne 1 si le caractere c cherche est entre ' ' et 
 	l'avant dernier caratere de l table ascii ou 0 s'il
 	ne l'est pas */
-
 char	*ft_itoa(int n);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
@@ -182,5 +181,13 @@ int		ft_tolower(int c);
 
 int		ft_toupper(int c);
 /* Passe le caractere c de minuscule a majuscule*/
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
