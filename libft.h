@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/09 15:03:05 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/11 10:17:02 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int		ft_isprint(int c);
 /* retourne 1 si le caractere c cherche est entre ' ' et 
 	l'avant dernier caratere de l table ascii ou 0 s'il
 	ne l'est pas */
+
+char	*ft_itoa(int n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 /* Cherche le caractere c dans  les n premiers octets apres
@@ -104,6 +106,8 @@ char	*ft_strdup(const char *s);
 	cette nouvelle chaîne dupliquée. En cas d'échec de
 	l'allocation mémoire, elle retourne NULL
 		/!\ +1 a strlen pour malloc afin d'integrer '\0' */
+
+char	*ft_strjoin(char const *s1, char const *s2);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /* ajoute src à la fin de dest, en copiant au maximum 

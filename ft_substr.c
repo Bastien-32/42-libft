@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:48:01 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/08 11:13:37 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/11 09:40:17 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 */
+static char	*ft_empty_s(void)
+{
+	char	*dest;
+
+	dest = (char *)malloc(1);
+	if (!dest)
+		return (NULL);
+	dest[0] = '\0';
+	return (dest);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -29,12 +39,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*dest;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	if ((size_t)start >= ft_strlen(s))
-	{
-		dest = (char *)malloc((1) * sizeof(char));
-		dest[0] = '\0';
-		return (dest);
-	}
+		return (ft_empty_s());
 	if (len > ft_strlen(s) || (start + len > ft_strlen(s)))
 		len = ft_strlen(s) - start;
 	dest = (char *)malloc((len + 1) * sizeof(char));
@@ -48,6 +56,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest[i] = '\0';
 	return (dest);
 }
+
 /*
 #include <stdio.h>
 
