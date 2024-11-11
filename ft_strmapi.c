@@ -1,57 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 10:16:00 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 14:04:12 by badal-la         ###   ########.fr       */
+/*   Created: 2024/11/11 14:05:47 by badal-la          #+#    #+#             */
+/*   Updated: 2024/11/11 14:54:58 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_lenn(int n)
+/*
+char	ft_upper(unsigned int i, char c)
 {
-	int	i;
-
-	i = 0;
-	if (n <= 0)
-		i = 1;
-	while (n != 0)
-	{
-		n /= 10;
-		i++;
-	}
-	return (i);
+	(void) i;
+	if (c >= 'a' && c <= 'z')
+		return (c -= 32);
+	else
+		return (c);
 }
 
-char	*ft_itoa(int n)
+size_t	ft_strlen(const char *s)
 {
-	char	*str;
-	int		i;
-	long	nb;
+	size_t	i;
 
-	nb = n;
-	i = ft_lenn(nb);
-	str = (char *)malloc((i + 1) * sizeof(char));
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+*/
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
 	str[i] = '\0';
-	if (nb < 0)
-	{
-		str[0] = '-';
-		nb = -nb;
-	}
-	if (n == 0)
-		str[0] = '0';
-	while (nb > 0)
-	{
-		i--;
-		str[i] = (nb % 10) + '0';
-		nb /= 10;
-	}
 	return (str);
 }
 /*
@@ -59,11 +54,13 @@ char	*ft_itoa(int n)
 
 int main (void)
 {
-	int n = 2147483647;
-	char *s = ft_itoa(n);
-	printf("%s\n", s);
-	free(s);
+	char *str = "Hello la compagnie 42!";
+	char *dest;
+	dest = ft_strmapi(str, ft_upper);
+	if (dest)
+	{
+		printf("%s\n", dest);
+		free(dest);
+	}
 }
 */
-/* attention a bien traiter n == 0 et ne pas oublier de transformer n en long
- ft_lenn -> ne pas oublier la premiere condition*/
