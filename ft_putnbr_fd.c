@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:04:56 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 16:06:41 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/11 17:31:04 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,22 @@ void	ft_putnbr_fd(int n, int fd)
 	c = (n % 10) + '0';
 	write(fd, &c, 1);
 }
+/*
+#include <fcntl.h>
+#include <stdio.h>
+
+int	main(void)
+{
+	int	nb = 5874;
+	int fd = open("output.txt", O_WRONLY | O_APPEND);
+	if (fd == -1)
+	{
+		perror("Erreur d'ouverture du fichier");
+		return (1);
+	}
+	ft_putnbr_fd(nb, fd);
+	close(fd);
+	
+	return (0);
+}
+*/

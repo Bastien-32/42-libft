@@ -8,30 +8,37 @@ LIBC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 		ft_strmapi.c ft_striteri.c ft_putstr_fd.c ft_putendl_fd.c \
 		ft_putnbr_fd.c ft_putchar_fd.c
 
+BONUS = ft_lstnew.c
+
 SRC = ${LIBC}
+SRCSALL = ${LIBC} ${BONUS}
 
 OBJS = ${SRC:.c=.o}
+OBJSALL = ${SRCSALL:.c=.o}
 
-NAME = libft.a
+
+NAME = libft.a 
 
 CC = gcc
 
-FLAGS = -Wall -Werror -Wextra -I ./
+FLAGS = -Wall -Werror -Wextra
 
 %.o: %.c
 		${CC} ${FLAGS} -c $< -o $@
 
 ${NAME}: ${OBJS}
 		ar -rsc ${NAME} ${OBJS}
+bonus: ${OBJSALL}
+		ar -rsc ${NAME} ${OBJSALL}
 
 all: ${NAME}
 
 clean:
-		rm -f ${OBJS}
+		rm -f ${OBJSALL}
 
 fclean: clean;
 		rm -f ${NAME}
 
 re:	fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
