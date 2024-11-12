@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:40:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 14:55:12 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:45:11 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@ void	del(void *content)
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
+	t_list		*temp;
+
 	if (!lst || !del)
 		return ;
 	while (*lst)
 	{
-		temp = (*lst)->next;   // Sauvegarde du nœud suivant
-		del((*lst)->content);   // Libère le contenu du nœud actuel
-		free(*lst);             // Libère le nœud actuel
-		*lst = temp;            // Passe au nœud suivant
+		temp = (*lst)->next;
+		del((*lst)->content);
+		free(*lst);
+		*lst = temp;
 	}
 	*lst = NULL;
 }
