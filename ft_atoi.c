@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:43:28 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 11:55:17 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:43:55 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Convert an ASCII character string (char) into an integer value (int).
+Need to account for whitespace and a single + or - sign */
 
 #include "libft.h"
 

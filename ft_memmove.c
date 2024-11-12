@@ -6,9 +6,15 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:19:42 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/10 18:40:39 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:41:00 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Copies the first `n` bytes from `src` to `dest`.
+   Handles memory overlap.
+       /!\ Use: while (i < n) ... i++
+       /!\ And: while (n != 0) ... n--
+       /!\ ((unsigned char *)s)[i] */
 
 #include "libft.h"
 
@@ -26,7 +32,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
-		return (dest);
 	}
 	if (dest > src)
 	{

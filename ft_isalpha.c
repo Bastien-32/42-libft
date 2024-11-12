@@ -6,10 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:18:46 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 16:24:02 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:52:41 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Returns 1 if the character c is an alphabetical 
+character in the ASCII table, or 0 if it is not */
 #include "libft.h"
 
 int	ft_isalpha(int c)

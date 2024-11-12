@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:18:05 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 16:49:43 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:24:25 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Assigns the character 0 (not '0') to a string s n times and returns s.
+   /!\ cast s to (unsigned char) */
 
 #include "libft.h"
 

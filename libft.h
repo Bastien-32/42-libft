@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 14:41:51 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:24:38 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@ typedef struct s_list
 }					t_list;
 
 int		ft_atoi(const char *str);
-/* Convertit un ascii en int */
 
 void	*ft_bzero(void *s, size_t n);
-/* Assigne a une chaine de caractere n fois le caractere 0 
+/* Assigne a une chaine de caractere s n fois le caractere 0 
 	(pas '0') et retourne s.
 		/!\ caster en (unsigned char) s */
 
@@ -35,18 +34,18 @@ void	*ft_calloc(size_t nmemb, size_t size);
 	(pas 0) a chaque octet cree. utilise bzero apres 
 	avoir malloc */
 
-int		ft_isascii(int c);
-/* retourne 1 si le caractere c cherche est un ascii ou 0 
-	s'il ne l'est pas */
-
 int		ft_isalnum(int c);
 /* retourne 1 si le caractere c cherche est soit un chiffre 
-	de la table ou un caractere alphabetique ascii ou 0 
+	ou un caractere alphabetique de la table ascii ou 0 
 	s'il ne l'est pas */
 
 int		ft_isalpha(int c);
 /* retourne 1 si le caractere c cherche est un caractere 
 	alphabetique de la table ascii ou 0 s'il ne l'est pas */
+
+int		ft_isascii(int c);
+/* retourne 1 si le caractere c cherche est un ascii ou 0 
+	s'il ne l'est pas */
 
 int		ft_isdigit(int c);
 /* retourne 1 si le caractere c cherche est un chiffre de 
@@ -56,14 +55,17 @@ int		ft_isprint(int c);
 /* retourne 1 si le caractere c cherche est entre ' ' et 
 	l'avant dernier caratere de l table ascii ou 0 s'il
 	ne l'est pas */
-char	*ft_itoa(int n);
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_itoa(int n);
+/* Convertit un entier `n` en une chaîne de caractères 
+	ASCII terminée par un caractère nul et retourne cette chaîne.
+	Gère les nombres positifs et négatifs. */
 
 void	*ft_memchr(const void *s, int c, size_t n);
-/* Cherche le caractere c dans  les n premiers octets apres
+/* Cherche le caractere c dans  les n premiers octets de
 	s et renvoie un pointeur vers l'adresse de ce caractere.
-	Elle ne s'arrete pas a un '\0'.
+	Elle ne s'arrete pas a un '\0' et return NULL si le 
+	caractère n'est pas trouvé.
 		/!\ caster :	(unsigned char)c
 						((unsigned char *)s)[i]
 		/!\ return (NULL) a la fin */
@@ -145,6 +147,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 /* parcourt et compte chaque caractère de la chaîne s jusqu'à
 rencontrer le caractère nul (\0) */
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char	*ft_strtrim(char const *s1, char const *set);
 

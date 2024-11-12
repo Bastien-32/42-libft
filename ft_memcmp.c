@@ -6,24 +6,24 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:29:17 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/06 15:15:23 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 22:38:49 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Compares the memory blocks `s1` and `s2`, byte by byte, up to `n` bytes.
+   Note: `strncmp` compares two character strings.
+   	/!\ convert s1 & s2 in  (unsigned char *) */
 
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;
-	unsigned char	*s11;
-	unsigned char	*s22;
 
-	s11 = (unsigned char *)s1;
-	s22 = (unsigned char *)s2;
 	i = 0;
-	while (i < n && s11[i] == s22[i])
+	while (i < n && ((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])
 		i++;
 	if (i == n)
 		return (0);
-	return (s11[i] - s22[i]);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

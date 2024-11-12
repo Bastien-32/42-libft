@@ -6,9 +6,11 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:19:01 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 16:28:07 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:54:04 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Returns 1 if the character 'c' is an ASCII character, or 0 if it is not */
 
 #include "libft.h"
 

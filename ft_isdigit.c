@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:19:12 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 16:30:36 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:56:18 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Returns 1 if the character `c` is a digit 
+in the ASCII table, or 0 if it is*/
 
 #include "libft.h"
 

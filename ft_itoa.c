@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:16:00 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 14:04:12 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 21:58:57 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Converts an integer `n` into a null-terminated ASCII string 
+and returns the string. Handles both positive and negative numbers. */
 
 #include "libft.h"
 
