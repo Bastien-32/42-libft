@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 17:35:08 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 12:16:38 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -195,6 +195,12 @@ void	ft_putnbr_fd(int n, int fd);
 
 void	ft_putstr_fd(char *s, int fd);
 
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
+t_list	*ft_lstlast(t_list *lst);
+
 t_list	*ft_lstnew(void *content);
+
+int		ft_lstsize(t_list *lst);
 
 #endif

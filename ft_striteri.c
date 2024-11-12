@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:05:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 15:08:08 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/12 09:30:31 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	ft_upper(unsigned int i, char c)
 	(void) i;
 	if (c >= 'a' && c <= 'z')
 		c -= 32;
-
 }
 */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))

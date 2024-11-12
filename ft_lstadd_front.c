@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 17:16:40 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 11:54:58 by badal-la         ###   ########.fr       */
+/*   Created: 2024/11/12 09:35:23 by badal-la          #+#    #+#             */
+/*   Updated: 2024/11/12 11:55:17 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
+}
+/*
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;
@@ -23,18 +31,30 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-/*
 #include <stdio.h>
 
-int	main(void)
+int main (void)
 {
-	int		value = 42;
-	t_list	*new_node;
+	char	*last_value;
+	char	*second_value;
+	char	*first_value;
 
-	new_node = ft_lstnew(&value);
-	if (new_node)
-		printf("Nœud créé avec le contenu : %d\n", *(int *)(new_node->content));
-	free(new_node);
-	return (0);
+	first_value = "Hello";
+	second_value = " la";
+	last_value = " team";
+	t_list	*node0;
+	t_list	*node1;
+	t_list	*node2;
+	node0 = ft_lstnew(first_value);
+	node1 = ft_lstnew(second_value);
+	node2 = ft_lstnew(last_value);
+	ft_lstadd_front(&node2, node1);
+	ft_lstadd_front(&node2, node0);
+	while (node2)
+	{
+		printf("%s", (char *)node2->content);
+		node2 = node2->next;
+	}
+	
 }
 */
