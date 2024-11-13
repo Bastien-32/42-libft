@@ -6,9 +6,17 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:34:54 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 17:49:35 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:15:35 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* ft_strlcat appends the string src to the end of dst, ensuring the total 
+length does not exceed size, including the null-terminating character (\0). 
+The function returns the total length the resulting string would have had 
+if size were sufficiently large (initial length of dst plus length of src). 
+If size is less than or equal to the initial length of dst, 
+it returns size + the length of src. The function ensures that dst 
+is always null-terminated. */
 
 #include "libft.h"
 /*

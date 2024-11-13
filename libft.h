@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 22:24:38 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:16:51 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,16 @@ void	*ft_memset(void *s, int c, size_t n);
 		/!\ ((unsigned char *)s)[i]  */
 
 char	**ft_split(char const *s, char c);
+/* découpe la chaîne s en sous-chaînes en utilisant c comme
+	délimiteur, puis renvoie un tableau de pointeurs vers
+	ces sous-chaînes, avec un pointeur nul (NULL) pour
+	indiquer la fin du tableau. */
 
 char	*ft_strchr(const char *s, int c);
-/*  recherche le caractère c dans une cdc s terminée par
-	un caractère nul '\0'.
+/*  recherche le caractère c dans une chaîne de caractères s 
+	terminée par un caractère nul et retourne l’adresse de 
+	sa position s’il est trouvé, ou NULL si le caractère 
+	n’est pas présent.
 		/!\ caster :	(unsigned char)c
 						(char *)&s[i]
 		/!\ fin de fonction :
@@ -116,17 +122,28 @@ char	*ft_strdup(const char *s);
 		/!\ +1 a strlen pour malloc afin d'integrer '\0' */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+/* Applique la fonction donnée à chaque caractère de 
+	la chaîne s, en modifiant directement chaque caractère 
+	dans la chaîne d’origine. */
 
 char	*ft_strjoin(char const *s1, char const *s2);
+/* concatène deux chaînes de caractères s1 et s2 en allouant 
+	suffisamment de mémoire pour contenir les deux chaînes, 
+	y compris le caractère nul de fin (\0). 
+	Elle retourne une nouvelle chaîne contenant le contenu 
+	de s1 suivi de s2. En cas d’échec de l’allocation de mémoire, 
+	elle retourne NULL.
+ */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-/* ajoute src à la fin de dest, en copiant au maximum 
-	size - strlen(dest) - 1 caractères pour garantir que dest
-	reste bien terminée par '\0'.
-	Retourne la longueur totale que la chaîne aurait eue si
-	elle avait eu assez d’espace, c’est-à-dire 
-	strlen(src) + strlen(dest).
-	Cela permet de détecter si un débordement a eu lieu.
+/* ft_strlcat concatène la chaîne src à la fin de dst, 
+	en s’assurant que la longueur totale ne dépasse pas size, 
+	y compris le caractère nul de fin (\0). La fonction renvoie 
+	la longueur totale que la chaîne aurait eue si size avait 
+	été suffisamment grand (la longueur initiale de dst plus 
+	la longueur de src). Si size est inférieur ou égal à la 
+	longueur initiale de dst, la fonction retourne size + la longueur de src. 
+	Elle s’assure que dst est toujours terminé par un caractère nul.
 		/!\ debut de fonction :
 			if (size == 0 || size <= i)
 				return (ft_strlen(src) + size); */
@@ -192,12 +209,25 @@ int		ft_toupper(int c);
 /* Passe le caractere c de minuscule a majuscule*/
 
 void	ft_putchar_fd(char c, int fd);
+/* Permet d'écrire le caractère c dans le fichier fd.
+ Il s'agit de la meme  fonction que ft_putchar sauf 
+ qu'on remplace dans write le descripteur de sortie
+  standard 1 par fd. 
+ */
 
 void	ft_putendl_fd(char *s, int fd);
+/* Écrit la phrase s dans le fichier fd. Suivi d'un
+	retour à la ligne
+   Il s'agit de la même fonction que ft_putstr + \n 
+   à la fin */
 
 void	ft_putnbr_fd(int n, int fd);
+/* Écrit le nombre n dans le fichier fd.
+   Il s'agit de la même fonction que ft_putnbr */
 
 void	ft_putstr_fd(char *s, int fd);
+/* Écrit la phrase s dans le fichier fd. 
+   Il s'agit de la même fonction que ft_putstr */
 
 void	ft_lstadd_back(t_list **lst, t_list *new);
 

@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:19:58 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 16:48:39 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:05:42 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Assigns the character c to a string n times and returns s.
+   /!\ (unsigned char)c
+   /!\ ((unsigned char *)s)[i]  */
 
 #include "libft.h"
 

@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:20:46 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 17:28:03 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:39:39 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* searches for the character c in a null-terminated string s 
+and returns the address of its position if found, 
+or NULL if the character is not present. */
 
 #include "libft.h"
 

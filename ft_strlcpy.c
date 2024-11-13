@@ -6,9 +6,20 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:17:46 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/06 15:12:52 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:14:06 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Copies up to size - 1 characters from src to dest to ensure 
+   that dest is always null-terminated (\0), as long as size 
+   is greater than 0. The function returns the length of the 
+   source string src, allowing the caller to determine if the 
+   copy was truncated (if src is longer than size).
+       /!\ Start of function:
+           if (size == 0)
+               return (ft_strlen(src));
+       /!\ End of function:
+           return (ft_strlen(src));*/
 
 #include "libft.h"
 /*

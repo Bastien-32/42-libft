@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:04:56 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 17:31:04 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:21:09 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* write a number n to a given file descriptor fd 
+ This is the same function as ft_putnbr, except we replace
+in write the standard output descriptor 1 by fd*/
 
 #include "libft.h"
 

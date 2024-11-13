@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:21:04 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/06 10:21:05 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:17:44 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Iterates through and counts each character in the string s 
+   until it encounters the null character (\0) */
 
 #include "libft.h"
 

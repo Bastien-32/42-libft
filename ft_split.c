@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 15:02:05 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/10 22:26:59 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:31:32 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* splits the string s into substrings using c as the delimiter, 
+then returns an array of pointers to these substrings, 
+with a null pointer (NULL) marking the end of the array.*/
 
 #include "libft.h"
 

@@ -6,9 +6,17 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:35:00 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/06 16:37:30 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:46:12 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Allocates enough memory to copy the source string s, 
+including the null-terminating character (\0). 
+It then copies each character from s into the newly allocated memory space. 
+The function returns a pointer to this newly duplicated string. 
+In case of memory allocation failure, it returns NULL.
+Use strlcopy for duplicate s to dest.
+	/!\ +1 to strlen in malloc to include '\0'. */
 
 #include "libft.h"
 /*
@@ -50,7 +58,7 @@ char	*ft_strdup(const char *s)
 	ft_strlcpy(dest, s, slen);
 	return (dest);
 }
-/*
+/* 
 void	ft_putstr(char *str)
 {
 	while (*str)
@@ -72,4 +80,4 @@ int	main(void)
 	ft_putstr("\n");
 	free(dest);
 }
-*/
+ */

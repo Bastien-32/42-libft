@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:05:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 14:54:58 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:26:23 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
 /*
 #include <stdio.h>
 

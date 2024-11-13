@@ -6,9 +6,14 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:00:56 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 16:55:57 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:15:19 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Writes the character c to the file descriptor fd. 
+	This is the same function as ft_putchar, 
+	except we replace in write the standard output descriptor 1 by fd.
+*/
 
 #include "libft.h"
 

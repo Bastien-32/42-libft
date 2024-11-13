@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:22:13 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 16:59:54 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:19:53 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* write a string s to a given file descriptor fd 
+ This is the same function as ft_putstr, except we replace
+in write the standard output descriptor 1 by fd*/
 
 #include "libft.h"
 

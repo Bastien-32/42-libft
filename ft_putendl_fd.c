@@ -6,9 +6,14 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 15:40:15 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 17:01:29 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/13 11:20:15 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* write a string s to a given file descriptor fd
+ followed by a newline character (\n) 
+ This is the same function as ft_putstr with /n added, 
+ except we replace in write the standard output descriptor 1 by fd*/
 
 #include "libft.h"
 
