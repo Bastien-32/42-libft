@@ -6,12 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:05:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/13 11:55:51 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 09:31:25 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* Applies the given function to each character of the string s, 
 modifying each character directly in the original string */
+
 #include "libft.h"
 /*
 char	ft_upper(unsigned int i, char c)

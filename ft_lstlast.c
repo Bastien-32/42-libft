@@ -6,60 +6,22 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:07:21 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 12:38:47 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:00:45 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-int	ft_lstsize(t_list *lst)
-{
-	int	i;
 
-	i = 0;
-	while (lst)
-	{
-		lst = lst->next;
-		i++;
-	}
-	return (i);
-}
-*/
 t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = ft_lstsize(lst);
 	if (!lst)
 		return (NULL);
-	while (i > 1)
-	{
+	while (lst->next)
 		lst = lst->next;
-		i--;
-	}
 	return (lst);
 }
+
 /*
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*node;
-
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (!lst || !new)
-		return ;
-	new->next = *lst;
-	*lst = new;
-}
-
 #include <stdio.h>
 
 int main (void)
@@ -82,15 +44,5 @@ int main (void)
 	ft_lstadd_front(&node2, node0);
 	test = ft_lstlast(node2);
 	printf("%s", (char *)test->content);	
-}
-*/
-/*
-t_list	*ft_lstlast(t_list *lst)
-{
-	if (!lst)
-		return (NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
 }
 */

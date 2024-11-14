@@ -6,22 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:14:57 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/09 14:52:56 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:05:12 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-*/
 int	ft_strchrtrim(const char *s, int c)
 {
 	int	i;

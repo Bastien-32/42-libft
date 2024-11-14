@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/13 12:16:51 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:20:56 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,15 +101,8 @@ char	**ft_split(char const *s, char c);
 	indiquer la fin du tableau. */
 
 char	*ft_strchr(const char *s, int c);
-/*  recherche le caractère c dans une chaîne de caractères s 
-	terminée par un caractère nul et retourne l’adresse de 
-	sa position s’il est trouvé, ou NULL si le caractère 
-	n’est pas présent.
-		/!\ caster :	(unsigned char)c
-						(char *)&s[i]
-		/!\ fin de fonction :
-			if ((char)c == '\0')
-				return ((char *)&s[i]);
+/*  recherche le caractè
+int		ft_isprint(int c);n ((char *)&s[i]);
 			return (NULL) */
 
 char	*ft_strdup(const char *s);
@@ -236,6 +229,10 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
+
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 t_list	*ft_lstlast(t_list *lst);
 

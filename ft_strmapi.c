@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:05:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/13 12:26:23 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:04:03 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,6 @@ char	ft_upper(unsigned int i, char c)
 		return (c -= 32);
 	else
 		return (c);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
 */
 

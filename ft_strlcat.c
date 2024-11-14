@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:34:54 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/13 12:15:35 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:03:39 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,7 @@ it returns size + the length of src. The function ensures that dst
 is always null-terminated. */
 
 #include "libft.h"
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;

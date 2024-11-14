@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 09:41:59 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/13 12:09:44 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:03:27 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,7 @@ It returns a new string containing the content of s1 followed by s2.
 If memory allocation fails, it returns NULL. */
 
 #include "libft.h"
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;

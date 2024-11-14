@@ -6,22 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:48:01 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/11 09:40:17 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:05:22 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-*/
 static char	*ft_empty_s(void)
 {
 	char	*dest;

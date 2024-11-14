@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:21:27 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/10 18:42:43 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:04:45 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,6 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 /*
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
 #include <unistd.h>
 
 void	print_address_hex(void *ptr)

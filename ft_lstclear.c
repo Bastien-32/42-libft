@@ -6,16 +6,11 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:40:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 17:45:11 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:23:06 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	del(void *content)
-{
-	free(content);
-}
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {

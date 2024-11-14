@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:21:50 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 13:54:24 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:59:57 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last->next = new;
 }
 /*
-t_list	*ft_lstnew(void *content)
-{
-	t_list	*node;
-
-	node = (t_list *)malloc(sizeof(t_list));
-	if (!node)
-		return (NULL);
-	node->content = content;
-	node->next = NULL;
-	return (node);
-}
 #include <stdio.h>
 
 int main (void)
