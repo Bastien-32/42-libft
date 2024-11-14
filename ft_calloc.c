@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:58:24 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 12:59:11 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:52:37 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	dest = (char *)malloc((slen) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
-	ft_memset(dest, 0, slen);
+	ft_bzero(dest, slen);
 	return (dest);
 }
 /*
