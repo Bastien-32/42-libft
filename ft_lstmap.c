@@ -6,17 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 09:52:42 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 14:10:03 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:46:40 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-static void	del(void *content)
-{
-	free(content);
-}
-*/
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*dest_list;
