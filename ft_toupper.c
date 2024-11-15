@@ -6,9 +6,11 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:21:48 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/07 11:39:50 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:14:19 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Converts the character c from lowercase to uppercase */
 
 #include "libft.h"
 

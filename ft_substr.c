@@ -6,9 +6,14 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:48:01 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:05:22 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:13:35 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* extracts a substring from the string s, starting at index start and 
+copying up to len characters, or until the end of s if it is shorter. 
+The function allocates a new string for this substring and returns 
+a pointer to it. If memory allocation fails, it returns NULL. */
 
 #include "libft.h"
 

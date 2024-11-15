@@ -6,9 +6,14 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 11:14:57 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:05:12 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:13:11 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* removes all characters specified in set from the beginning and end 
+of the string s1, creating a new string with the “trimmed” portion of s1. 
+It returns a pointer to this new string, excluding any leading and trailing 
+characters found in set. If memory allocation fails, it returns NULL. */
 
 #include "libft.h"
 

@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 15:20:56 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:21:38 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,15 @@ char	**ft_split(char const *s, char c);
 	indiquer la fin du tableau. */
 
 char	*ft_strchr(const char *s, int c);
-/*  recherche le caractè
-int		ft_isprint(int c);n ((char *)&s[i]);
+/*  recherche le caractère c dans une chaîne de caractères s 
+	terminée par un caractère nul et retourne l’adresse de 
+	sa position s’il est trouvé, ou NULL si le caractère 
+	n’est pas présent.
+		/!\ caster :	(unsigned char)c
+						(char *)&s[i]
+		/!\ fin de fonction :
+			if ((char)c == '\0')
+				return ((char *)&s[i]);
 			return (NULL) */
 
 char	*ft_strdup(const char *s);
@@ -159,12 +166,21 @@ size_t	ft_strlen(const char *s);
 rencontrer le caractère nul (\0) */
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
-char	*ft_strtrim(char const *s1, char const *set);
+/* ft_strmapi applique la fonction f à chaque caractère de la 
+	chaîne s pour créer une nouvelle chaîne résultante, où chaque 
+	caractère est modifié en fonction de son index et de sa valeur 
+	initiale. La fonction f prend deux paramètres : l’index du 
+	caractère et le caractère lui-même. ft_strmapi retourne un 
+	pointeur vers la nouvelle chaîne. En cas d’échec d’allocation 
+	de mémoire, elle retourne NULL. */
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-/* compare n caractères de s1 et s2 ou s’arrête plus tôt si
-	elle rencontre un caractère nul (\0) dans l'une des chaînes 
+/* strncmp compare jusqu’à n caractères des chaînes s1 et s2, 
+	ou s’arrête plus tôt si un caractère nul (\0) est rencontré 
+	dans l’une des chaînes. Elle renvoie une valeur négative si 
+	s1 est inférieure à s2, zéro si elles sont égales, ou une valeur 
+	positive si s1 est supérieure à s2. Si n est 0, la fonction 
+	retourne directement 0 sans effectuer de comparaison. 
 	/!\ debut de fonction :
 			if (n == 0)
 				return (0);
@@ -174,10 +190,11 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 /* recherche la première occurrence de little dans les len premiers
 	caractères de big. La recherche s’arrête si la sous-chaîne est
-	trouvée ou si elle dépasse len caractères. Si little est une
-	chaîne vide, strnstr retourne big. Si little n'est pas trouvé,
-	elle retourne NULL. Si little est trouve retourne les caracteres
-	de big a partir u debut de little
+	trouvée ou si elle dépasse len caractères. 
+	Si little est une chaîne vide, strnstr retourne big. 
+	Si little n'est pas trouvé, elle retourne NULL. 
+	Si little est trouve retourne les caracteresde big a partir du 
+	debut de little
 		/!\ debut de fonction :
 			if (little[0] == '\0')
 				return ((char *)big);*/
@@ -193,7 +210,19 @@ char	*ft_strrchr(const char *s, int c);
 				return ((char *)&s[i]);
 			return (NULL) */
 
+char	*ft_strtrim(char const *s1, char const *set);
+/* supprime tous les caractères spécifiés dans set du début et de la 
+	fin de la chaîne s1, en créant une nouvelle chaîne de caractères avec 
+	la partie « nettoyée » de s1. Elle retourne un pointeur vers cette 
+	nouvelle chaîne, sans les caractères du début et de la fin trouvés 
+	dans set. Si l’allocation de mémoire échoue, elle retourne NULL. */
+
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+/* extrait une sous-chaîne de la chaîne s, en commençant à l’index start 
+	et en copiant jusqu’à len caractères, ou jusqu’à la fin de s si 
+	celle-ci est plus courte. La fonction alloue une nouvelle chaîne 
+	pour cette sous-chaîne et retourne un pointeur vers celle-ci. 
+	Si l’allocation de mémoire échoue, elle retourne NULL. */
 
 int		ft_tolower(int c);
 /* Passe le caractere c de majuscule a minuscule*/
@@ -237,6 +266,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstlast(t_list *lst);
 
 t_list	*ft_lstnew(void *content);
+/* ft_lstnew crée un nouvel élément de liste chaînée, 
+	initialise son contenu avec content, et définit next à NULL. 
+	Elle retourne un pointeur vers l’élément ou NULL 
+	en cas d’échec d’allocation. */
 
 int		ft_lstsize(t_list *lst);
 

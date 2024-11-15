@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:21:27 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:04:45 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:12:39 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* searches for the last occurrence of a character c in a null-terminated 
+string s. It returns a pointer to the last occurrence of c in s, 
+or NULL if c is not found. */
 
 #include "libft.h"
 

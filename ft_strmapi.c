@@ -6,9 +6,15 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:05:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:04:03 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:10:28 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* applies the function f to each character of the string s to create 
+a new resulting string, where each character is modified based on its 
+index and initial value. The function f takes two parameters: the character’s
+index and the character itself. ft_strmapi returns a pointer to the new string. 
+If memory allocation fails, it returns NULL. */
 
 #include "libft.h"
 /*

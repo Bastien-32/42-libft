@@ -6,9 +6,15 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:21:17 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/08 09:20:08 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:11:51 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* compares up to n characters of the strings s1 and s2, or stops earlier 
+if a null character (\0) is encountered in either string. It returns a negative 
+value if s1 is less than s2, zero if they are equal, or a positive value if 
+s1 is greater than s2. If n is 0, the function returns 0 immediately without 
+performing any comparison. */
 
 #include "libft.h"
 

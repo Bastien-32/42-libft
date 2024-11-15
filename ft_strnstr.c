@@ -6,9 +6,16 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 13:54:10 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:04:14 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:12:11 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* ft_strnstr searches for the first occurrence of the substring little 
+within the string big, examining only the first len characters of big. 
+If little is an empty string, ft_strnstr returns big. 
+If little is not found within the first len characters of big, it returns NULL. 
+If little is found within the first len characters of big, it returns a pointer 
+to the beginning of little in big. */
 
 #include "libft.h"
 

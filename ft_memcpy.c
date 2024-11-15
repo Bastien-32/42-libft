@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:19:33 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 22:32:16 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:19:32 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t			i;
+	size_t	i;
 
 	i = 0;
 	if (!dest && !src)
