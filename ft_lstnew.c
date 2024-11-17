@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 17:16:40 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/12 11:54:58 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:51:50 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* ft_lstnew creates a new linked list element, 
+   initializes its content with content, and sets next to NULL. 
+   It returns a pointer to the element or NULL if the allocation fails. */
 
 #include "libft.h"
 

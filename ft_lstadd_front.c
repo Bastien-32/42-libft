@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 09:35:23 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:00:07 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:51:59 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* ft_lstadd_front adds the node new to the beginning of 
+   the linked list pointed by lst. */
 
 #include "libft.h"
 

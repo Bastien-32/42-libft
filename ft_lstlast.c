@@ -6,9 +6,13 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:07:21 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:00:45 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:12:02 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+/* returns a pointer to the last node of the linked list pointed to by lst. 
+	If the list is empty (lst == NULL), it returns NULL. */
 
 #include "libft.h"
 

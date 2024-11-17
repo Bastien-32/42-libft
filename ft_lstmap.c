@@ -6,9 +6,15 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 09:52:42 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 15:46:40 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:13:43 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* applies the function f to each element of the linked list lst to create 
+a new linked list, where each node contains the result of applying f 
+to the content of the original nodes. If a memory allocation fails or 
+an error occurs, the function uses del to free the memory of the new list and 
+returns NULL. */
 
 #include "libft.h"
 

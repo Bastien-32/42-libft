@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:52:37 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 13:01:07 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:08:21 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* traverses a linked list pointed to by lst and returns the total number 
+of nodes in the list. */
 
 #include "libft.h"
 

@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 13:21:50 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 12:59:57 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 18:54:48 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* ft_lstadd_front adds the node new to the end of 
+   the linked list pointed by lst. */
 
 #include "libft.h"
 
@@ -16,8 +19,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!lst || !new)
-		return ;
 	if (!*lst)
 	{
 		*lst = new;

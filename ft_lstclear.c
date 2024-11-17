@@ -6,9 +6,12 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:40:47 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/14 15:45:55 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/15 19:03:16 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Deletes all the nodes of the linked list 
+   pointed to by lst. At the end, *lst is set to NULL. */
 
 #include "libft.h"
 

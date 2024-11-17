@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/15 18:21:38 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:14:28 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -252,18 +252,43 @@ void	ft_putstr_fd(char *s, int fd);
    Il s'agit de la même fonction que ft_putstr */
 
 void	ft_lstadd_back(t_list **lst, t_list *new);
-
+/* Ajoute un noeud new à la fin de la liste chaînée 
+	pointée par lst.
+		/!\ debut de fonction :
+			if (!lst || !new)
+				return ; */
+				
 void	ft_lstadd_front(t_list **lst, t_list *new);
+/* Ajoute un noeud new au début de la liste chaînée 
+	pointée par lst.
+		/!\ debut de fonction :
+			if (!lst || !new)
+				return ; */
 
 void	ft_lstclear(t_list **lst, void (*del)(void*));
+/* Supprime l'ensemble des noeuds de la liste chaînée 
+	pointée par lst. A la fin lst est mis à NULL. */
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
+/* /* Supprime le contenu du nœud lst en utilisant la fonction del
+   fournie, puis libère le nœud lui-même. N'affecte pas les 
+   autres nœuds de la liste. */
 
 void	ft_lstiter(t_list *lst, void (*f)(void *));
+/* Applique la fonction donnée f à chaque élément 
+   de la liste chaînée pointée par lst. */
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
+/* applique la fonction f à chaque élément de la liste chaînée lst 
+	pour créer une nouvelle liste chaînée, où chaque nœud contient 
+	le résultat de l’application de f sur le contenu des nœuds originaux. 
+	Si une allocation échoue ou si une erreur survient, la fonction 
+	utilise del pour libérer la mémoire de la nouvelle liste 
+	et retourne NULL. */
+	
 t_list	*ft_lstlast(t_list *lst);
+/* retourne un pointeur vers le dernier nœud de 
+	la liste chaînée pointée par lst.  */
 
 t_list	*ft_lstnew(void *content);
 /* ft_lstnew crée un nouvel élément de liste chaînée, 
@@ -272,5 +297,7 @@ t_list	*ft_lstnew(void *content);
 	en cas d’échec d’allocation. */
 
 int		ft_lstsize(t_list *lst);
+/* parcourt une liste chaînée pointée par lst et retourne le nombre 
+	total de nœuds présents dans la liste. */
 
 #endif
