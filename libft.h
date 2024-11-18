@@ -6,7 +6,7 @@
 /*   By: badal-la <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:22:07 by badal-la          #+#    #+#             */
-/*   Updated: 2024/11/16 11:14:28 by badal-la         ###   ########.fr       */
+/*   Updated: 2024/11/18 09:54:08 by badal-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -257,7 +257,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 		/!\ debut de fonction :
 			if (!lst || !new)
 				return ; */
-				
+
 void	ft_lstadd_front(t_list **lst, t_list *new);
 /* Ajoute un noeud new au début de la liste chaînée 
 	pointée par lst.
@@ -270,7 +270,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 	pointée par lst. A la fin lst est mis à NULL. */
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
-/* /* Supprime le contenu du nœud lst en utilisant la fonction del
+/* Supprime le contenu du nœud lst en utilisant la fonction del
    fournie, puis libère le nœud lui-même. N'affecte pas les 
    autres nœuds de la liste. */
 
@@ -285,7 +285,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 	Si une allocation échoue ou si une erreur survient, la fonction 
 	utilise del pour libérer la mémoire de la nouvelle liste 
 	et retourne NULL. */
-	
+
 t_list	*ft_lstlast(t_list *lst);
 /* retourne un pointeur vers le dernier nœud de 
 	la liste chaînée pointée par lst.  */
